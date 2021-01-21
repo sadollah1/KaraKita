@@ -1,0 +1,13 @@
+﻿@model VeriErisimKatmani.IletisimBilgileri
+<div class="col-lg-5 col-md-12 mb-4 start-lg start-md center-sm center-xs">
+    <div class="Box">
+        <h2>Kurumsal</h2>
+        <p>KARA KITA ULUSLARARASI ORGANİZASYON HİZMETLERİ SAN. ve TİC. LTD. ŞTİ.</p>
+        <ul>
+            <li class="icon01">@Model.Adres</li>
+            <li class="icon02"><a href="tel:@Model.Telefon">@Model.Telefon</a></li>
+            <li class="icon03"><a href="mailto:@Model.MailAdresi">@Model.MailAdresi</a></li>
+            <li class="icon04"><a href="https://api.whatsapp.com/send?phone=@Model.WhatsappTelefon">WhatsApp:@Model.WhatsappTelefon</a></li>
+        </ul>
+    </div>
+</div>

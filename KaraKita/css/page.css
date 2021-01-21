@@ -1,0 +1,246 @@
+.PageHeader .row{
+    height: 100%;
+}
+.PageHeader.aboutus{
+    background-image: url("../images/hakkinda.jpg")!important;
+}
+.PageHeader.contact{
+    background-image: url("../images/iletisim.jpg")!important;
+}
+.PageHeader.project{
+    height: 360px;
+    background-color: #f7f7f7;
+}
+.PageHeader::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 0;
+}
+.PageHeader.project::after{
+    background: rgba(0,0,0,0);
+}
+.PageHeader .container{
+    position: relative;
+    z-index: 1;
+}
+.PageHeader.project h1{
+    font-size: 45px;
+    line-height: 65px;
+    font-weight: 700;
+    color: #060606;
+}
+.PageHeader.project p.breadcrumbs{
+    color: #666;
+    margin-top: 15px;
+}
+.PageHeader.project p.breadcrumbs a{
+    color: #666;
+}
+.pageText{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.pageText p{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 14px 0;
+}
+.pageText p img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.contactText{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.contactText p{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: #666;
+}
+.contactText p b{
+    font-weight: 700;
+    color: #060606;
+}
+.contactText p a{
+    color: #666;
+}
+.contactText p a:hover{
+    color: #c1983c;
+}
+.pageSocial{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+}
+.pageSocial a{
+    float: left;
+    width: 38px;
+    height: 38px;
+    margin: 0 4px 0 0;
+    background-image: url(../images/social.png);
+    background-size: 152px 38px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+.pageSocial a:last-child{
+    margin-right: 0;
+}
+.pageSocial a.icon01{
+    background-position: 0 0;
+}
+.pageSocial a.icon02{
+    background-position: -38px 0;
+}
+.pageSocial a.icon03{
+    background-position: -76px 0;
+}
+.pageSocial a.icon04{
+    background-position: -114px 0;
+}
+.pageSocial a:hover{
+    opacity: .5;
+}
+ul.pageForm{
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+ul.pageForm li{
+    padding: 0;
+    margin: 8px 0px;
+    position: relative;
+}
+ul.pageForm li input[type=text],
+ul.pageForm li textarea{
+    background: #f6f6f6;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #666;
+    padding: 13px 20px;
+}
+ul.pageForm li textarea{
+    height: 150px;
+}
+ul.pageForm li label.error{
+    color: #666;
+}
+ul.pageForm li input::-webkit-input-placeholder,
+ul.pageForm li textarea::-webkit-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+ul.pageForm li input:-moz-placeholder,
+ul.pageForm li textarea:-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+ul.pageForm li input:-ms-input-placeholder,
+ul.pageForm li textarea:-ms-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+ul.pageForm li input[type=submit],
+ul.pageForm li input[type=button],
+ul.pageForm li button {
+    width: auto;
+    background: #c1983c;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #FFF;
+    padding: 13px 30px;
+}
+/*----box------*/
+.contentBox,
+.contentBox span.Image,
+.contentBox span.Image img,
+.contentBox span.Text,
+.contentBox span.Text h3,
+.contentBox span.Text a,
+.contentBox a.gallery,
+.contentBox a.gallery img{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.contentBox{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.contentBox span.Text{
+    margin-top: 25px;
+}
+.contentBox span.Text h3{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #060606;
+}
+.contentBox span.Text p{
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 72px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.contentBox span.Text a{
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #FFF;
+    padding: 12px 25px;
+    background: #c1983c;
+    margin-top: 15px;
+}
+.contentBox span.Text a:hover{
+    background: #414042;
+}
+@media only screen and (max-width: 991px) {
+    .pageText p{
+        font-size: 13px;
+        line-height: 24px;
+        margin: 12px 0;
+    }
+    .contactText p{
+        font-size: 13px;
+        line-height: 24px;
+        margin: 0 0 24px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .pageText p{
+        font-size: 12px;
+        line-height: 20px;
+        margin: 10px 0;
+    }
+    .contactText p{
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 0 20px;
+    }
+    .PageHeader.project {
+        height: 300px;
+    }
+    .PageHeader.project h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+}

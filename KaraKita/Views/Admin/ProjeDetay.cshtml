@@ -1,0 +1,30 @@
+﻿@model VeriErisimKatmani.Proje
+@{
+    ViewBag.Title = "ProjeDetay";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <h4>Proje Detayı</h4>
+    <form action="@Url.Action("ProjeDetay","Admin")" method="post" class="form-horizontal" style="margin-top:50px!important;" enctype="multipart/form-data">
+        <hr />
+        @Html.HiddenFor(x=>x.ResimYolu)
+        <div class="form-group">
+            <label class="col-md-2">Proje Adı</label>
+            <div class="col-md-6">
+            <input type="text" name="Ad" value="@Model.Ad" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Açıklama</label>
+            <div class="col-md-6"></div>
+            <textarea class="form-control" name="Aciklama">@Model.Aciklama</textarea>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Resim Dosyası</label>
+            <div class="col-md-6"></div>
+            <input class="form-control-file" type="file" accept="image/*" name="Resim" />
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary">Kaydet</button>
+    </form>
+</div>
+

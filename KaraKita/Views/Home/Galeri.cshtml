@@ -1,0 +1,45 @@
+﻿@model List<VeriErisimKatmani.Proje>
+@{
+    ViewBag.Title = "Kurumsal";
+}
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/css/page.css" />
+}
+<div class="container-fluid animate pagewrapper">
+    <!--section-->
+    <div class="container-fluid section PageHeader contact">
+        <div class="container-fluid container">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-10">
+                    <h1>Galeri</h1>
+                    <p class="breadcrumbs">
+                        <a href="#">ANA SAYFA</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">GALERİ</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+    <!--section-->
+    <div class="container-fluid section">
+        <div class="container-fluid container">
+            <div class="row">
+                <!--item-->
+                @foreach (var item in Model)
+                {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="contentBox">
+                        <a href="~/images/@item.ResimYolu" class="gallery" data-fancybox="gallery">
+                            <img src="~/images/@item.ResimYolu" style="max-height:250px!important;max-width:370px!important;" height="300" width="370" />
+                        </a>
+                    </div>
+                </div>
+                }
+                
+               
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+</div>
+

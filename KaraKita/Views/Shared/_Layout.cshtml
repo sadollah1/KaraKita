@@ -1,0 +1,172 @@
+﻿
+<html lang="tr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>KARAKITA ORGANİZASYON</title>
+    <meta name="theme-color" content="#c1983c" />
+    <meta name="msapplication-navbutton-color" content="#c1983c" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#c1983c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/form.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.fancybox.min.css" />
+    @RenderSection("Css", false)
+</head>
+
+<body>
+    <!--Header-->
+    <div class="container-fluid header animate">
+        <div class="container-fluid topRow animate">
+            <div class="row">
+                <div class="col-lg col-md col-sm col-lg-offset-6 col-md-offset-6 info">
+                    <a href="https://api.whatsapp.com/send?phone=905446938992&text=" class="whatsapp">+90 544 693 8992</a>
+                    <a href="mailto:info@karakitaorganizasyon.com.tr">info@karakitaorganizasyon.com.tr</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid menuBox">
+            <div class="row middle-xs between-sm between-xs">
+                <div class="col-lg-1 col-md-2 col-sm-4">
+                    <!--logo-->
+                    <div class="logo">
+                        <h1><a href="@Url.Action("Index","Home")">KARAKITA ORGANİZASYON</a></h1>
+                    </div>
+                    <!--logo-->
+                </div>
+                <div class="col-lg-9 col-md-7 col-sm-8 center-xs">
+                    <div class="Menu">
+                        <ul>
+                            <li><a href="@Url.Action("Kurumsal","Home")">KURUMSAL</a></li>
+                            <li><a href="@Url.Action("Projelerimiz","Home")">PROJELERİMİZ</a></li>
+                            <li><a href="@Url.Action("Referanslar","Home")">REFERANSLARIMIZ</a></li>
+                            <li><a href="@Url.Action("Galeri","Home")">GALERİ</a></li>
+                            <li><a href="@Url.Action("Etkinlikler","Home")">ETKİNLİKLER</a></li>
+                            <li><a href="@Url.Action("Iletisim","Home")">İLETİŞİM</a></li>
+                        </ul>
+                    </div>
+                    <!--Mobile-->
+                    <div class="MobileBt">
+                        <div><span></span></div>
+                    </div>
+                    <!--Mobile-->
+                </div>
+                <div class="col-lg-2 col-md-3 col-md-visible col-sm-hidden col-xs-hidden">
+                    <div class="social">
+                        <a href="#" class="icon01">Twitter</a>
+                        <a href="#" class="icon02">Facebook</a>
+                        <a href="#" class="icon03">Pinterest</a>
+                        <a href="#" class="icon04">Vimeo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--MobilMenu-->
+        <div class="MobilMenu"></div>
+        <!--MobilMenu-->
+    </div>
+    @RenderBody()
+    <div class="container-fluid footer">
+        <!--ust-row-->
+        <div class="container-fluid container">
+            <div class="row">
+                @*<div class="col-lg-5 col-md-12 mb-4 start-lg start-md center-sm center-xs">
+                        <div class="Box">
+                            <h2>Kurumsal</h2>
+                            <p>KARA KITA ULUSLARARASI ORGANİZASYON HİZMETLERİ SAN. ve TİC. LTD. ŞTİ.</p>
+                            <ul>
+                                <li class="icon01">Atatürk Mh. Halit Bey Sk. No:23/1 Ümraniye / İSTANBUL</li>
+                                <li class="icon02"><a href="tel:+905446938992">+90 544 693 8992</a></li>
+                                <li class="icon03"><a href="mailto:info@karakitaorganisazyon.com.tr">info@karakitaorganisazyon.com.tr</a></li>
+                                <li class="icon04"><a href="https://api.whatsapp.com/send?phone=+90 544 693 8992">WhatsApp:+90 544 693 8992</a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+
+                @{Html.RenderAction("IletisimPartial", "Home");}
+                <div class="col-lg-3 col-md-6 col-sm-6 start-lg start-md center-sm center-xs">
+                    <div class="footMenu">
+                        <ul>
+                            <li><a href="@Url.Action("Kurumsal","Home")">KURUMSAL</a></li>
+                            <li><a href="@Url.Action("Projelerimiz","Home")">PROJELERİMİZ</a></li>
+                            <li><a href="@Url.Action("Referanslar","Home")">REFERANSLARIMIZ</a></li>
+                            <li><a href="@Url.Action("Galeri","Home")">GALERİ</a></li>
+                            <li><a href="@Url.Action("Etkinlikler","Home")">ETKİNLİKLER</a></li>
+                            <li><a href="@Url.Action("Iletisim","Home")">İLETİŞİM</a></li>
+                            <li><a href="@Url.Action("Login","Admin")">YÖNETİCİ GİRİŞİ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 start-lg start-md center-sm center-xs">
+                    <div class="Box">
+                        <h2>Bize Ulaşın</h2>
+                        <form id="form-post-ebulten" action="@Url.Action("MesajEkle","Home")" method="post">
+                            <ul class="form">
+                                <li><input type="text" name="name" placeholder="Adınız Soyadınız"></li>
+                                <li><input type="text" name="email" placeholder="E-mail "></li>
+                                <li><textarea name="mesaje" placeholder="Mesajınız"></textarea></li>
+                                <li><input type="submit" value="GÖNDER"></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid footBottomBox">
+            <div class="container-fluid container">
+                <div class="row start-lg start-md center-sm center-xs">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <span class="copyText">Tüm Hakları Saklıdır. 2020 © <b>Kara Kıta Organizasyon</b></span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!--diverseffect-->
+                        <span class="diverseffect">
+                            <a href="https://bit.ly/1M7mWCQ" target="_blank" alt="dijital ajans" title="DiversEffect" rel="muse">Diversffect</a>
+                        </span>
+                        <!--/diverseffect-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <!--Script-->
+    <script type="text/javascript" src="~/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="~/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/js/localization/messages_tr.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    <script type="text/javascript" src="~/js/form.js"></script>
+    @RenderSection("Scripts", false)
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#form-post-ebulten").submit(function (event) {
+                event.preventDefault(); //prevent default action
+                var post_url = $(this).attr("action"); //get form action url
+                var request_method = $(this).attr("method"); //get form GET/POST method
+                var form_data = $(this).serialize(); //Encode form elements for submission
+                $.ajax({
+                    url: post_url,
+                    type: request_method,
+                    data: form_data
+                }).done(function (response) { //
+                    debugger;
+                    if (response) {
+                    }
+                    else {
+
+                    }
+                });
+            });
+
+        });
+    </script>
+    <!--/Script-->
+</body>
+</html>

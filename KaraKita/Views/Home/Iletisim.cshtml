@@ -1,0 +1,98 @@
+﻿@model VeriErisimKatmani.IletisimBilgileri
+@{
+    ViewBag.Title = "About";
+}
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/css/page.css" />
+}
+<div class="container-fluid animate pagewrapper">
+    <!--section-->
+    <div class="container-fluid section PageHeader contact">
+        <div class="container-fluid container">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-10">
+                    <h1>İletişim</h1>
+                    <p class="breadcrumbs">
+                        <a href="#">ANA SAYFA</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="#">HAKKIMIZDA</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+    <!--section-->
+    <div class="container-fluid section">
+        <div class="container-fluid container">
+            <div class="row start-lg start-md center-sm center-xs">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="contactText">
+                        <p><b>Adres</b><br>@Model.Adres
+                        <p>
+                            <b>Telefon :</b><a href="tel:@Model.Telefon">@Model.Telefon</a><br>
+                            <b>Whatsapp :</b> <a href="https://api.whatsapp.com/send?phone=@Model.WhatsappTelefon">@Model.WhatsappTelefon</a><br>
+                            <b>E-mail :</b> <a href="mailto:@Model.MailAdresi">@Model.MailAdresi</a>
+                        </p>
+                    </div>
+                    <div class="pageSocial">
+                        <a href="#" class="icon01">Twitter</a>
+                        <a href="#" class="icon02">Facebook</a>
+                        <a href="#" class="icon03">Pinterest</a>
+                        <a href="#" class="icon04">Vimeo</a>
+                    </div>
+                    <div class="contactText">
+                        <p>
+                            <b>Çalışma Saatleri</b><br>
+                            Pazartesi - @Model.HaftaiciCalismaSaatleri<br>
+                            Salı - @Model.HaftaiciCalismaSaatleri<br>
+                            Çarşamba - @Model.HaftaiciCalismaSaatleri<br>
+                            Perşembe - @Model.HaftaiciCalismaSaatleri<br>
+                            Cuma - @Model.HaftaiciCalismaSaatleri<br>
+                            Cumartesi - @Model.HaftasonuCalismaSaatleri<br>
+                            Pazar - @Model.HaftasonuCalismaSaatleri
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                    <form id="form-post-contact" action="@Url.Action("MesajEkle","Home")" method="post">
+                        <ul class="pageForm">
+                            <li><input type="text" name="ad" placeholder="Adınız Soyadınız"></li>
+                            <li><input type="text" name="email" placeholder="E-mail"></li>
+                            <li><input type="text" name="telefon" placeholder="Telefon"></li>
+                            <li><input type="text" name="konu" placeholder="Konu"></li>
+                            <li><textarea name="mesaj" placeholder="Mesajınız"></textarea></li>
+                            <li><input type="submit" value="Mesajı Gönder"></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+</div>
+@section Scripts{
+    <script src="~/js/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#form-post-contact").submit(function (event) {
+                event.preventDefault(); //prevent default action
+                var post_url = $(this).attr("action"); //get form action url
+                var request_method = $(this).attr("method"); //get form GET/POST method
+                var form_data = $(this).serialize(); //Encode form elements for submission
+                $.ajax({
+                    url: post_url,
+                    type: request_method,
+                    data: form_data
+                }).done(function (response) { //
+                    debugger;
+                    if (response) {
+                    }
+                    else {
+
+                    }
+                });
+            });
+
+        });
+    </script>
+}

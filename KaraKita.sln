@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaraKita", "KaraKita\KaraKita.csproj", "{1BDE0004-FD89-43C0-A7BE-2391180663B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriErisimKatmani", "VeriErisimKatmani\VeriErisimKatmani.csproj", "{AB3C552D-1BEE-4369-ACA7-B7D0B4B62668}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BDE0004-FD89-43C0-A7BE-2391180663B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDE0004-FD89-43C0-A7BE-2391180663B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDE0004-FD89-43C0-A7BE-2391180663B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDE0004-FD89-43C0-A7BE-2391180663B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3C552D-1BEE-4369-ACA7-B7D0B4B62668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3C552D-1BEE-4369-ACA7-B7D0B4B62668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3C552D-1BEE-4369-ACA7-B7D0B4B62668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3C552D-1BEE-4369-ACA7-B7D0B4B62668}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DA3305A-EA71-4A94-A976-BD58905B894F}
+	EndGlobalSection
+EndGlobal

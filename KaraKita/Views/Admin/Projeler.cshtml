@@ -1,0 +1,47 @@
+﻿@model IEnumerable<VeriErisimKatmani.Proje>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="col-md-12 col-xs-12 col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="@Url.Action("ProjeDetay","Admin")"  class="btn btn-sm btn-primary" style="float:right;">Proje Ekle</a>
+            <h4 class="panel-title">Projelerimiz</h4>
+
+        </div>
+        <div class="panel-body">
+            <table id="table-proje" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Açıklama</th>
+                        <th>Oluşturma Zamanı</th>
+                        <th>Resim</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td><a href="@Url.Action("ProjeDetay","Admin",new { projeId=item.Id})" class="btn-link"> @item.Ad</a></td>
+                        <td>@item.Aciklama</td>
+                        <td>@item.EklemeZamanı</td>
+                        <td><img src="~/images/@item.ResimYolu" width="50" height="50" alt="Alternate Text" /></td>
+                        <td><a href="@Url.Action("ProjeSil","Admin",new { projeId=item.Id})" class="btn-link"> <i class="fa fa-trash text-danger"></i></a></td>
+
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#table-proje').DataTable();
+    });
+</script>

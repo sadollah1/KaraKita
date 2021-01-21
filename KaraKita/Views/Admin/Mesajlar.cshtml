@@ -1,0 +1,50 @@
+﻿@model List<VeriErisimKatmani.Mesaj>
+@{
+    ViewBag.Title = "Mesajlar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="col-md-12 col-xs-12 col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+
+            <h4 class="panel-title">Gelen Mesajlar</h4>
+
+        </div>
+        <div class="panel-body">
+            <table id="table-proje" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Email</th>
+                        <th>Telefon</th>
+                        <th>Konu</th>
+                        <th>Mesaj</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.AdSoyad</td>
+                        <td>@item.Email</td>
+                        <td>@item.Telefon</td>
+                        <td>@item.Konu</td>
+                        <td>@item.Icerik</td>
+                        <td><a href="@Url.Action("MesajSil","Admin",new { mesajId=item.Id})" class="btn-link"> <i class="fa fa-trash text-danger"></i></a></td>
+
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#table-proje').DataTable();
+    });
+</script>

@@ -1,0 +1,76 @@
+﻿@model KaraKita.Models.ProjeDetayModel
+@{
+    ViewBag.Title = "ProjeDetayı";
+}
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/css/page.css" />
+}
+
+
+<div class="container-fluid animate pagewrapper">
+    <!--section-->
+    <div class="container-fluid section PageHeader project">
+        <div class="container-fluid container">
+            <div class="row center-xs middle-xs">
+                <div class="col-xs-10">
+                    <h1>@Model.Proje.Ad</h1>
+                    <p class="breadcrumbs">
+                        <a href="@Url.Action("Index","Home")">ANA SAYFA</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="@Url.Action("Projelerimiz","Home")">PROJELERİMİZ</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+    <!--section-->
+    <div class="container-fluid section">
+        <div class="container-fluid container">
+            <div class="row center-xs">
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <div class="pageText">
+                        <p><img src="~/images/@Model.Proje.ResimYolu" /></p>
+                        <p>@Model.Proje.Aciklama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+    <!--section-->
+    <div class="container-fluid section grey">
+        <div class="container-fluid container">
+            <div class="row center-xs">
+                <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12">
+                    <h2>Diğer Projelerimiz</h2>
+                    <div class="wave-line wave-center"></div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-xs sliderBox">
+                    <div class="row">
+                        <!--item-->
+                        @foreach (var item in Model.Projeler)
+                        {
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 slide">
+                                <div class="contentBox">
+                                    <span class="Image">
+                                        <img src="~/images/@item.ResimYolu" height="300" width="370" />
+                                    </span>
+                                    <span class="Text">
+                                        <h3>@item.Ad</h3>
+                                        <p>@item.Aciklama</p>
+                                        <a href="@Url.Action("ProjeDetayı","Home",new { projeId=item.Id})">Devamı</a>
+                                    </span>
+                                </div>
+                            </div>
+                        }
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/section-->
+</div>
+
