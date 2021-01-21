@@ -388,6 +388,7 @@
     <Content Include="Views\Home\IletisimPartial.cshtml" />
     <Content Include="Views\Admin\IletisimBilgileri.cshtml" />
     <Content Include="Views\Admin\YoneticiBilgileri.cshtml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VeriErisimKatmani\VeriErisimKatmani.csproj">

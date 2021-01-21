@@ -92,7 +92,11 @@ namespace KaraKita.Controllers
         }
         public ActionResult Login()
         {
-
+            if (HttpContext.Session["IsAdminLogin"] !=null) {
+                if (HttpContext.Session["IsAdminLogin"].ToString() == "true") {
+                    return RedirectToAction("Projeler", "Admin");
+                }
+            }
             return View();
         }
         [HttpPost]
